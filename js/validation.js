@@ -30,3 +30,13 @@ password.addEventListener('input',function()
     else
     passerror.textContent="Minimum 8 Characters";
  });
+ const emails=document.querySelector("#email");
+let Emailerror=document.querySelector(".Emailerror");
+emails.addEventListener('input',function()
+{
+    let passRegex=RegExp('^[a-zA-Z0-9]+.[a-zA-Z0-9]+@[A-Za-z0-9]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$');
+    if(passRegex.test(emails.value))
+    Emailerror.textContent="";
+    else
+    Emailerror.textContent="Enter valid Email";
+ });
